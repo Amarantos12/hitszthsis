@@ -1,0 +1,147 @@
+% !TEX root = ../main.tex
+
+% 专硕请取消下面注释
+% \makeatletter
+%   \def\hitsz@csubjecttitle{类别}
+% \makeatother
+
+\hitszsetup{
+  %******************************
+  % 注意：
+  %   1. 配置里面不要出现空行
+  %   2. 不需要的配置信息可以删除
+  %******************************
+  %
+  %=====
+  % 秘级
+  %=====
+  statesecrets={公开},
+  natclassifiedindex={TM301.2},
+  intclassifiedindex={62-5},
+  %
+  %=========
+  % 中文信息
+  %=========
+  ctitleone={基于深度学习的水下},%本科生封面使用
+  ctitletwo={声纳图像去噪},%本科生封面使用
+  ctitlecover={基于深度学习的水下声纳图像去噪},%放在封面中使用，自由断行
+  ctitle={基于深度学习的水下声纳图像去噪},%放在原创性声明中使用
+  % csubtitle={一条副标题}, %一般情况没有，可以注释掉
+  cxueke={工学},
+  cpostgraduatetype={学术},
+  csubject={自动化},
+  % csubject={机械工程},
+  caffil={机器人与先进制造学院},
+  % caffil={哈尔滨工业大学（深圳）},
+  cauthor={胡章睿},
+  csupervisor={胡靓教授},
+  % cassosupervisor={某某某 教授}, % 副导师
+  % ccosupervisor={某某某 教授}, % 合作导师
+  % 日期自动使用当前时间，若需指定按如下方式修改：
+  cdate={2025年10月},
+  % 指定第二页封面的日期，即答辩日期
+  cdatesecond={2025年10月30日},
+  cstudentid={220320619},
+  % cstudenttype={同等学力人员}, %非全日制教育申请学位者
+  %（同等学力人员）、（工程硕士）、（工商管理硕士）、
+  %（高级管理人员工商管理硕士）、（公共管理硕士）、（中职教师）、（高校教师）等
+  %
+  %
+  %=========
+  % 英文信息
+  %=========
+  etitle={Research on Underwater Sonar Image Denoising Based on Deep Learninging},
+  esubtitle={This is the sub title},
+  exueke={Engineering},
+  esubject={Mechanical Engineering},
+  eaffil={Harbin Institute of Technology, Shenzhen},
+  eauthor={Jingxuan Yang},
+  esupervisor={Prof. XXX},
+  % eassosupervisor={XXX},
+  % ecosupervisor={Prof. XXX}, % Co-Supervisor off Campus
+  % 日期自动生成，若需指定按如下方式修改：
+  edate={June, 2023},
+  estudenttype={Master of Engineering},
+  %
+  % 关键词用“英文逗号”分割
+  ckeywords={\TeX, \LaTeX, CJK, 论文模板, 毕业论文},
+  ekeywords={\TeX, \LaTeX, CJK, hitszthesis, thesis},
+}
+
+% 中文摘要
+\begin{cabstract}
+前视声纳因其在浑浊水域、低能见度及光照不足等极端条件下仍能稳定成像，已经成为水下探测与水下机器人感知中不可或缺的关键传感方式。然而，声纳图像普遍受到散斑
+噪声、混响噪声、旁瓣噪声以及结构性噪声等多源干扰的影响，导致图像对比度下降、目标边界模糊及特征提取困难。从而严重制约了后续目标识别、建图与自主导航等任务
+的性能。传统的声纳图像去噪方法虽然能够降低部分噪声，但常出现过度平滑的现象，难以在复杂水下环境中保持结构与边缘信息。近年来，基于深度学习的监督式方法通过
+学习噪声分布取得了一定成效，但其依赖大量标注数据，需要大量成对（含噪——干净）声纳数据集，获取成本高且跨设备、跨场景泛化能力不足。
+
+针对上述问题，本文提出了一种基于生成对抗网络的渐进式声纳图像去噪框架SonarGAN，实现多类型噪声的协同抑制与目标结构的自适应保持。该框架由三个阶段组成：
+
+（1）非配对初步去噪阶段，利用循环一致性生成对抗网络在非配对的真实噪声图与仿真干净图之间学习随机噪声分布，并完成初步去噪；
+
+（2）成对结构抑制阶段，在条件生成对抗网络的框架下基于合成的噪声——干净图像对进行训练，显示去除结构性噪声；
+
+（3）联合约束优化阶段，将前两阶段的结果进行融合与约束优化，实现全局一致的综合去噪。
+
+在次基础上，本文在所有生成器中引入自注意力模块以捕捉声纳图像的长程依赖关系，并引入VGG感知损失与图像级监督损失对模型进行精细化调优，从而在噪声抑制与结构
+保真之间取得平衡。本文主要的研究工作与创新点包括以下四方面：
+
+（1）提出了一种无需昂贵配对数据的声纳图像去噪框架SonarGAN，可在一次处理中同时抑制多种类型噪声，显著提升声纳图像质量与下游任务鲁棒性。
+
+（2）设计了多阶段渐进式生成对抗结构与联合优化机制，通过非配对与成对数据的协同学习，实现从随机噪声到结构性噪声的逐步抑制。
+
+（3）引入感知损失与自注意力机制以保持结构细节与全局一致性，有效避免了传统GAN模型中常见的伪影问题和边缘退化现象。
+
+（4）在多类型声纳的仿真与真实数据集上开展了系统性实验与对比分析，结果表明 SonarGAN 在图像清晰度、结构保持度及泛化性能方面均优于现有方法，验证了其在真实
+水下环境中的可行性与稳定性。此外，本文进一步将去噪后的声纳图像用于三维场景重建任务，并于多种主流去噪算法的重建结果进行对比。实验结果显示，使用SonarGAN
+处理后的声纳图像能够显著提升重建模型的集合精度与结构连续性，生成的三维场景更加完整，细节更清晰，从而充分证明了所提方法在下游重建任务中的有效性和优越性。
+
+综上所述，SonarGAN为多源噪声环境下的声纳图像去噪提供了一种高效、泛化性强的解决方案，并在三维重建等下游任务中展现出良好的适应性与应用潜力，为水下感知与重
+建研究提供了新的思路。
+
+\end{cabstract}
+
+% 英文摘要
+\begin{eabstract}
+Forward-looking sonar (FLS) has become an indispensable sensing modality in underwater exploration and robotic perception due to its ability 
+to provide reliable imaging in turbid waters, low-visibility conditions, and poor illumination environments. However, sonar images are often 
+corrupted by multiple types of noise, including speckle noise, reverberation, sidelobe interference, and structural noise, which significantly 
+degrade image contrast, blur object boundaries, and hinder robust feature extraction. These degradations in turn limit the performance of 
+downstream tasks such as target detection, mapping, and autonomous navigation. Conventional sonar image denoising methods can reduce part of 
+the noise but often lead to over-smoothing, making it difficult to preserve structural and edge details in complex underwater environments. 
+Recently, deep supervised learning-based approaches have achieved promising results by learning noise distributions; however, they rely heavily 
+on large labeled datasets, which require costly paired (noisy–clean) sonar images, and thus suffer from limited generalization across 
+different sonar types and underwater conditions.
+
+To address these challenges, this paper proposes SonarGAN, a progressive generative adversarial network (GAN)-based framework for sonar image 
+denoising that achieves collaborative suppression of multiple noise types while adaptively preserving structural details. The framework 
+consists of three stages:
+
+(1) Unpaired Preliminary Denoising, which employs a Cycle-Consistent Generative Adversarial Network (CycleGAN) to learn random noise distributions between unpaired real noisy and simulated clean images, achieving initial denoising;
+
+(2) Paired Structural Suppression, which uses a Conditional Generative Adversarial Network (pix2pix) trained on synthetic noisy–clean image pairs to explicitly remove structural noise;
+
+(3) Constrained Joint Refinement, which integrates and optimizes the outputs of the first two stages for globally consistent and comprehensive denoising.
+
+Furthermore, a self-attention module is embedded into all generators to capture long-range dependencies in sonar imagery, and both VGG perceptual 
+loss and image-level supervised loss are introduced to fine-tune the generators, effectively balancing noise suppression and structural fidelity. 
+The main contributions of this work are summarized as follows:
+
+(1)We propose SonarGAN, a sonar image denoising framework that requires no expensive paired datasets and can simultaneously suppress multiple types of noise, significantly improving image quality and the robustness of downstream tasks.
+
+(2)We design a multi-stage progressive GAN architecture with joint optimization, which achieves stepwise suppression from random to structural noise through collaborative learning of unpaired and paired data.
+
+(3)We incorporate perceptual loss and self-attention mechanisms to maintain structural details and global consistency, effectively avoiding artifacts and edge degradation common in traditional GAN-based models.
+
+(4)We conduct systematic experiments and comparative analyses on both simulated and real sonar datasets. Results show that SonarGAN outperforms 
+existing methods in terms of image clarity, structural preservation, and generalization ability, verifying its effectiveness and robustness 
+in real underwater environments. Moreover, we further apply the denoised sonar images to 3D scene reconstruction and compare the results with 
+those obtained using several mainstream denoising algorithms. The experimental results demonstrate that sonar images processed by SonarGAN 
+significantly improve the geometric accuracy and structural continuity of the reconstructed 3D scenes, producing more complete and detailed 
+reconstructions. This validates the effectiveness and superiority of the proposed method in downstream reconstruction tasks.
+
+In summary, SonarGAN provides an efficient and highly generalizable solution for sonar image denoising under multi-source noise conditions, 
+and demonstrates excellent adaptability and application potential in downstream tasks such as 3D reconstruction, offering new insights for 
+underwater perception and reconstruction research.
+
+\end{eabstract}
