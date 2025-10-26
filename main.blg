@@ -1,0 +1,71 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: hitszthesis.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: reference.bib
+Warning--I didn't find a database entry for "ren2010"
+Warning--I didn't find a database entry for "Gravagne2003"
+Warning--I didn't find a database entry for "webster2010"
+Warning--I didn't find a database entry for "liu2016"
+Warning--I didn't find a database entry for "fu2018"
+Warning--I didn't find a database entry for "zhai2015"
+Warning--I didn't find a database entry for "yao2015"
+Warning--I didn't find a database entry for "jones2006"
+Warning--I didn't find a database entry for "mcmahan2005"
+Warning--I didn't find a database entry for "jones2004"
+Warning--Require address: rahman2019svin2
+Warning--Require journal: kaess2010towards
+Warning--Require address: fallon2011efficient
+Warning--Require address: mascarenhas1997overview
+Warning--Require address: buades2005non
+Warning--Require address: hong2020end
+Warning--Require address: park2020contrastive
+Warning--Require address: lin2023conditional
+Warning--Require address: zhou2023stgan
+Warning--Require address: zhu2017unpaired
+Warning--Require address: isola2017image
+You've used 27 entries,
+            3189 wiz_defined-function locations,
+            899 strings with 11975 characters,
+and the built_in function-call counts, 53579 in all, are:
+= -- 5918
+> -- 102
+< -- 231
++ -- 4661
+- -- 363
+* -- 1445
+:= -- 5907
+add.period$ -- 0
+call.type$ -- 27
+change.case$ -- 150
+chr.to.int$ -- 0
+cite$ -- 38
+duplicate$ -- 7671
+empty$ -- 2091
+format.name$ -- 300
+if$ -- 14289
+int.to.chr$ -- 0
+int.to.str$ -- 27
+missing$ -- 0
+newline$ -- 108
+num.names$ -- 27
+pop$ -- 770
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 439
+stack$ -- 0
+substring$ -- 6443
+swap$ -- 1410
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 11
+while$ -- 712
+width$ -- 29
+write$ -- 409
+(There were 21 warnings)

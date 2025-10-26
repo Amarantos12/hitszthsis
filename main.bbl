@@ -1,0 +1,108 @@
+\begin{thebibliography}{10}
+\providecommand{\bibauthor}[1]{#1}
+\providecommand{\bibeditor}[1]{#1}
+\providecommand{\bibtranslator}[1]{#1}
+\providecommand{\bibtitle}[1]{#1}
+\providecommand{\bibbooktitle}[1]{#1}
+\providecommand{\bibjournal}[1]{#1}
+\providecommand{\bibmark}[1]{\mbox{#1}}
+\providecommand{\bibcountry}[1]{#1}
+\providecommand{\bibpatentid}[1]{#1}
+\providecommand{\bibedition}[1]{#1}
+\providecommand{\biborganization}[1]{#1}
+\providecommand{\bibaddress}[1]{#1}
+\providecommand{\bibpublisher}[1]{#1}
+\providecommand{\bibinstitution}[1]{#1}
+\providecommand{\bibschool}[1]{#1}
+\providecommand{\bibvolume}[1]{#1}
+\providecommand{\bibnumber}[1]{#1}
+\providecommand{\bibversion}[1]{#1}
+\providecommand{\bibpages}[1]{#1}
+\providecommand{\bibmodifydate}[1]{#1}
+\providecommand{\bibcitedate}[1]{#1}
+\providecommand{\bibyear}[1]{#1}
+\providecommand{\bibdate}[1]{#1}
+\providecommand{\biburl}[1]{\newline\url{#1}}
+
+\bibitem{rahman2019svin2}
+\bibauthor{RAHMAN S\@，LI A~Q\@，REKLEITIS I}\@. \bibtitle{Svin2: An underwater slam system using sonar, visual, inertial, and depth sensor}\bibmark{\,［C］} //\thinspace{}\bibbooktitle{2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}\@，\bibaddress{［S.l.］}\@，\bibyear{2019}\thinspace{}\textnormal{：}\bibpages{1861\textnormal{-}1868}\@.
+
+\bibitem{kaess2010towards}
+\bibauthor{KAESS M\@，JOHANNSSON H\@，ENGLOT B~J，et~al}\@. \bibtitle{Towards autonomous ship hull inspection using the Bluefin HAUV}\bibmark{\,［J］}\@，\bibyear{2010}\@.
+
+\bibitem{fallon2011efficient}
+\bibauthor{FALLON M~F\@，KAESS M\@，JOHANNSSON H，et~al}\@. \bibtitle{Efficient AUV navigation fusing acoustic ranging and side-scan sonar}\bibmark{\,［C］} //\thinspace{}\bibbooktitle{2011 IEEE International Conference on Robotics and Automation}\@，\bibaddress{［S.l.］}\@，\bibyear{2011}\thinspace{}\textnormal{：}\bibpages{2398\textnormal{-}2405}\@.
+
+\bibitem{cervenka2002sidescan}
+\bibauthor{CERVENKA P\@，DE~MOUSTIER C}\@. \bibtitle{Sidescan sonar image processing techniques}\bibmark{\,［J］}\@. \bibjournal{IEEE journal of oceanic engineering}\@，\bibyear{2002}\@，\bibvolume{18}\bibnumber{（2）\!\!}\thinspace{}\textnormal{：}\bibpages{108\textnormal{-}122}\@.
+
+\bibitem{mascarenhas1997overview}
+\bibauthor{MASCARENHAS N~D}\@. \bibtitle{An overview of speckle noise filtering in SAR images}\bibmark{\,［C］} //\thinspace{}\bibbooktitle{Image Processing Techniques, First Latino-American Seminar on Radar Remote Sensing\thinspace{}\textnormal{：}Vol~407}\@，\bibaddress{［S.l.］}\@，\bibyear{1997}\thinspace{}\textnormal{：}\bibpages{71}\@.
+
+\bibitem{lopes2002adaptive}
+\bibauthor{LOPES A\@，TOUZI R\@，NEZRY E}\@. \bibtitle{Adaptive speckle filters and scene heterogeneity}\bibmark{\,［J］}\@. \bibjournal{IEEE transactions on Geoscience and Remote Sensing}\@，\bibyear{2002}\@，\bibvolume{28}\bibnumber{（6）\!\!}\thinspace{}\textnormal{：}\bibpages{992\textnormal{-}1000}\@.
+
+\bibitem{chang2000adaptive}
+\bibauthor{CHANG S~G\@，YU B\@，VETTERLI M}\@. \bibtitle{Adaptive wavelet thresholding for image denoising and compression}\bibmark{\,［J］}\@. \bibjournal{IEEE transactions on image processing}\@，\bibyear{2000}\@，\bibvolume{9}\bibnumber{（9）\!\!}\thinspace{}\textnormal{：}\bibpages{1532\textnormal{-}1546}\@.
+
+\bibitem{buades2005non}
+\bibauthor{BUADES A\@，COLL B\@，MOREL J-M}\@. \bibtitle{A non-local algorithm for image denoising}\bibmark{\,［C］} //\thinspace{}\bibbooktitle{2005 IEEE computer society conference on computer vision and pattern recognition (CVPR'05)\thinspace{}\textnormal{：}Vol~2}\@，\bibaddress{［S.l.］}\@，\bibyear{2005}\thinspace{}\textnormal{：}\bibpages{60\textnormal{-}65}\@.
+
+\bibitem{dabov2007image}
+\bibauthor{DABOV K\@，FOI A\@，KATKOVNIK V，et~al}\@. \bibtitle{Image denoising by sparse 3-D transform-domain collaborative filtering}\bibmark{\,［J］}\@. \bibjournal{IEEE Transactions on image processing}\@，\bibyear{2007}\@，\bibvolume{16}\bibnumber{（8）\!\!}\thinspace{}\textnormal{：}\bibpages{2080\textnormal{-}2095}\@.
+
+\bibitem{ji2025sonar}
+\bibauthor{JI Y\@，XIE L\@，XU G，et~al}\@. \bibtitle{Sonar image denoising based on Noise2Void self-supervised learning}\bibmark{\,［J］}\@. \bibjournal{Remote Sensing Letters}\@，\bibyear{2025}\@，\bibvolume{16}\bibnumber{（5）\!\!}\thinspace{}\textnormal{：}\bibpages{560\textnormal{-}571}\@.
+
+\bibitem{si2024wtcrnet}
+\bibauthor{SI C\@，ZHANG S\@，CAI Q，et~al}\@. \bibtitle{WTCRNet: a wavelet transform and contrastive regularization network for sonar denoising by self-supervision}\bibmark{\,［J］}\@. \bibjournal{Intelligent Marine Technology and Systems}\@，\bibyear{2024}\@，\bibvolume{2}\bibnumber{（1）\!\!}\thinspace{}\textnormal{：}\bibpages{17}\@.
+
+\bibitem{zhang2023practical}
+\bibauthor{ZHANG K\@，LI Y\@，LIANG J，et~al}\@. \bibtitle{Practical blind image denoising via Swin-Conv-UNet and data synthesis}\bibmark{\,［J］}\@. \bibjournal{Machine Intelligence Research}\@，\bibyear{2023}\@，\bibvolume{20}\bibnumber{（6）\!\!}\thinspace{}\textnormal{：}\bibpages{822\textnormal{-}836}\@.
+
+\bibitem{vishwakarma2023denoising}
+\bibauthor{VISHWAKARMA A}\@. \bibtitle{Denoising and inpainting of sonar images using convolutional sparse representation}\bibmark{\,［J］}\@. \bibjournal{IEEE Transactions on Instrumentation and Measurement}\@，\bibyear{2023}\@，\bibvolume{72}\thinspace{}\textnormal{：}\bibpages{1\textnormal{-}9}\@.
+
+\bibitem{hong2020end}
+\bibauthor{HONG Z\@，FAN X\@，JIANG T，et~al}\@. \bibtitle{End-to-end unpaired image denoising with conditional adversarial networks}\bibmark{\,［C］} //\thinspace{}\bibbooktitle{Proceedings of the AAAI conference on artificial intelligence\thinspace{}\textnormal{：}Vol~34}\@，\bibaddress{［S.l.］}\@，\bibyear{2020}\thinspace{}\textnormal{：}\bibpages{4140\textnormal{-}4149}\@.
+
+\bibitem{liu2017unsupervised}
+\bibauthor{LIU M-Y\@，BREUEL T\@，KAUTZ J}\@. \bibtitle{Unsupervised image-to-image translation networks}\bibmark{\,［J］}\@. \bibjournal{Advances in neural information processing systems}\@，\bibyear{2017}\@，\bibvolume{30}\@.
+
+\bibitem{park2020contrastive}
+\bibauthor{PARK T\@，EFROS A~A\@，ZHANG R，et~al}\@. \bibtitle{Contrastive learning for unpaired image-to-image translation}\bibmark{\,［C］} //\thinspace{}\bibbooktitle{European conference on computer vision}\@，\bibaddress{［S.l.］}\@，\bibyear{2020}\thinspace{}\textnormal{：}\bibpages{319\textnormal{-}345}\@.
+
+\bibitem{ma2021structure}
+\bibauthor{MA Y\@，LIU J\@，LIU Y，et~al}\@. \bibtitle{Structure and illumination constrained GAN for medical image enhancement}\bibmark{\,［J］}\@. \bibjournal{IEEE Transactions on Medical Imaging}\@，\bibyear{2021}\@，\bibvolume{40}\bibnumber{（12）\!\!}\thinspace{}\textnormal{：}\bibpages{3955\textnormal{-}3967}\@.
+
+\bibitem{huang2020noise}
+\bibauthor{HUANG Y\@，XIA W\@，LU Z，et~al}\@. \bibtitle{Noise-powered disentangled representation for unsupervised speckle reduction of optical coherence tomography images}\bibmark{\,［J］}\@. \bibjournal{IEEE Transactions on Medical Imaging}\@，\bibyear{2020}\@，\bibvolume{40}\bibnumber{（10）\!\!}\thinspace{}\textnormal{：}\bibpages{2600\textnormal{-}2614}\@.
+
+\bibitem{zhao2023unpaired}
+\bibauthor{ZHAO B\@，ZHOU Q\@，HUANG L，et~al}\@. \bibtitle{Unpaired sonar image denoising with simultaneous contrastive learning}\bibmark{\,［J］}\@. \bibjournal{Computer Vision and Image Understanding}\@，\bibyear{2023}\@，\bibvolume{235}\thinspace{}\textnormal{：}\bibpages{103783}\@.
+
+\bibitem{lin2023conditional}
+\bibauthor{LIN T\@，HINDUJA A\@，QADRI M，et~al}\@. \bibtitle{Conditional GANs for Sonar Image Filtering with Applications to Underwater Occupancy Mapping}\bibmark{\,［C］} //\thinspace{}\bibbooktitle{2023 IEEE International Conference on Robotics and Automation (ICRA)}\@，\bibaddress{［S.l.］}\@，\bibyear{2023}\thinspace{}\textnormal{：}\bibpages{1048\textnormal{-}1054}\@.
+
+\bibitem{zhou2023stgan}
+\bibauthor{ZHOU X\@，TIAN K\@，ZHOU Z}\@. \bibtitle{STGAN: Sonar Image Despeckling Method Utilizing GAN and Transformer}\bibmark{\,［C］} //\thinspace{}\bibbooktitle{International Symposium on Artificial Intelligence and Robotics}\@，\bibaddress{［S.l.］}\@，\bibyear{2023}\thinspace{}\textnormal{：}\bibpages{56\textnormal{-}67}\@.
+
+\bibitem{ho2020denoising}
+\bibauthor{HO J\@，JAIN A\@，ABBEEL P}\@. \bibtitle{Denoising diffusion probabilistic models}\bibmark{\,［J］}\@. \bibjournal{Advances in neural information processing systems}\@，\bibyear{2020}\@，\bibvolume{33}\thinspace{}\textnormal{：}\bibpages{6840\textnormal{-}6851}\@.
+
+\bibitem{bryan2025diffusion}
+\bibauthor{BRYAN O\@，BERTHOMIER T\@，D'ALES B，et~al}\@. \bibtitle{A diffusion-based super resolution model for enhancing sonar images}\bibmark{\,［J］}\@. \bibjournal{The Journal of the Acoustical Society of America}\@，\bibyear{2025}\@，\bibvolume{157}\bibnumber{（1）\!\!}\thinspace{}\textnormal{：}\bibpages{509\textnormal{-}518}\@.
+
+\bibitem{yang2023side}
+\bibauthor{YANG Z\@，ZHAO J\@，ZHANG H，et~al}\@. \bibtitle{A side-scan sonar image synthesis method based on a diffusion model}\bibmark{\,［J］}\@. \bibjournal{Journal of Marine Science and Engineering}\@，\bibyear{2023}\@，\bibvolume{11}\bibnumber{（6）\!\!}\thinspace{}\textnormal{：}\bibpages{1103}\@.
+
+\bibitem{zhu2017unpaired}
+\bibauthor{ZHU J-Y\@，PARK T\@，ISOLA P，et~al}\@. \bibtitle{Unpaired image-to-image translation using cycle-consistent adversarial networks}\bibmark{\,［C］} //\thinspace{}\bibbooktitle{Proceedings of the IEEE international conference on computer vision}\@，\bibaddress{［S.l.］}\@，\bibyear{2017}\thinspace{}\textnormal{：}\bibpages{2223\textnormal{-}2232}\@.
+
+\bibitem{isola2017image}
+\bibauthor{ISOLA P\@，ZHU J-Y\@，ZHOU T，et~al}\@. \bibtitle{Image-to-image translation with conditional adversarial networks}\bibmark{\,［C］} //\thinspace{}\bibbooktitle{Proceedings of the IEEE conference on computer vision and pattern recognition}\@，\bibaddress{［S.l.］}\@，\bibyear{2017}\thinspace{}\textnormal{：}\bibpages{1125\textnormal{-}1134}\@.
+
+\bibitem{kullback1951information}
+\bibauthor{KULLBACK S\@，LEIBLER R~A}\@. \bibtitle{On information and sufficiency}\bibmark{\,［J］}\@. \bibjournal{The annals of mathematical statistics}\@，\bibyear{1951}\@，\bibvolume{22}\bibnumber{（1）\!\!}\thinspace{}\textnormal{：}\bibpages{79\textnormal{-}86}\@.
+
+\end{thebibliography}
