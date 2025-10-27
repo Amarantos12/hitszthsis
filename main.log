@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.10.25)  25 OCT 2025 20:57
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2025.10.25)  26 OCT 2025 20:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1783,21 +1783,17 @@ File: figures//golfer.eps Graphic file (type eps)
 
 
 ]
-File: figures//golfer.eps Graphic file (type eps)
-<figures//golfer.eps>
-
 
 Package lipsum Warning: Unknown language 'latin'. Hyphenation patterns for
 (lipsum)                'english' will be used instead.
 
-[9]
 File: figures//golfer.eps Graphic file (type eps)
 <figures//golfer.eps>
 File: figures//golfer.eps Graphic file (type eps)
 <figures//golfer.eps>
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--68
-[]\TU/texgyretermes(0)/m/n/10.53937 Fig.$$ 2-4 The person playing golf.
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
+[]\TU/texgyretermes(0)/m/n/10.53937 Fig.$$ 2-3 The person playing golf.
  []
 
 File: figures//golfer.eps Graphic file (type eps)
@@ -1805,20 +1801,20 @@ File: figures//golfer.eps Graphic file (type eps)
 File: figures//golfer.eps Graphic file (type eps)
 <figures//golfer.eps>
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--83
-[]\TU/texgyretermes(0)/m/n/10.53937 Fig.$$ 2-6 The person playing golf.
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
+[]\TU/texgyretermes(0)/m/n/10.53937 Fig.$$ 2-5 The person playing golf.
  []
 
 
-Underfull \hbox (badness 2990) in paragraph at lines 83--83
+Underfull \hbox (badness 2990) in paragraph at lines 71--71
 \TU/texgyretermes(0)/m/n/10.53937 Please note that, it is vertically top
  []
 
 File: figures//golfer.eps Graphic file (type eps)
 <figures//golfer.eps>
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--92
-[]\TU/texgyretermes(0)/m/n/10.53937 Fig.$$ 2-7 The person playing golf.
+Underfull \hbox (badness 10000) in paragraph at lines 80--80
+[]\TU/texgyretermes(0)/m/n/10.53937 Fig.$$ 2-6 The person playing golf.
  []
 
 File: figures//golfer.eps Graphic file (type eps)
@@ -1849,7 +1845,7 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             <->"FangSong/OT:script=hani;language=dflt;embolden=2;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
-[10] [11]
+[9] [10] [11]
 File: figures//golfer.eps Graphic file (type eps)
 <figures//golfer.eps>
 File: figures//golfer.eps Graphic file (type eps)
@@ -1865,7 +1861,7 @@ File: figures//golfer.eps Graphic file (type eps)
 File: figures//golfer.eps Graphic file (type eps)
 <figures//golfer.eps>
 LaTeX Font Info:    Font shape `TU/texgyretermes(0)/b/n' will be
-(Font)              scaled to size 10.53937pt on input line 175.
+(Font)              scaled to size 10.53937pt on input line 163.
 File: figures//golfer.eps Graphic file (type eps)
 <figures//golfer.eps>
 File: figures//golfer.eps Graphic file (type eps)
@@ -1886,7 +1882,7 @@ LaTeX Warning: Text page 13 contains only floats.
 
 [13] [14] [15]
 LaTeX Font Info:    Font shape `TU/texgyretermes(0)/m/sc' will be
-(Font)              scaled to size 12.045pt on input line 231.
+(Font)              scaled to size 12.045pt on input line 219.
  [16
 
 ]) (./body/chapter03.tex [17]
@@ -2018,13 +2014,13 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 17299F06CEA84C15CA26DBAAC842227A;7319.
+(rerunfilecheck)             Checksum: 1C514194AB37A7A0DA701A6E350D7217;7383.
  ) 
 Here is how much of TeX's memory you used:
- 47073 strings out of 478630
- 1016135 string characters out of 5846209
+ 47072 strings out of 478630
+ 1016126 string characters out of 5846209
  1875012 words of memory out of 5000000
- 66250 multiletter control sequences out of 15000+600000
+ 66249 multiletter control sequences out of 15000+600000
  574847 words of font info for 234 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  106i,12n,136p,2527b,2270s stack positions out of 10000i,1000n,20000p,200000b,200000s
