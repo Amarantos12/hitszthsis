@@ -58,11 +58,14 @@
 图像信息，如图\ref{fig:传统去噪方法效果图}所示，经过传统滤波处理后，仍存在大量噪声，可见传统滤波处理算法的鲁棒性较差。而深度学习的方法依赖大规模配对数据
 进行监督训练，而真实水下环境中难以获得与噪声图像严格对应的“干净”样本，导致模型泛化性不足，难以适用于不同声纳设备与环境条件。
 
-\begin{figure}[!ht]
-  \setlength{\subfigcapskip}{-1bp}
-  \centering
 
-  % ---- 保存第一张图的“标准尺寸盒子” ----
+\begin{figure}[!ht]
+  \centering
+  % 设置边框与图像之间的间距（可调，建议 1pt ~ 3pt）
+  \setlength{\fboxsep}{2pt}
+  \setlength{\fboxrule}{1pt}  % 边框粗细
+
+  % ---- 保存第一张图的“标准尺寸盒子”（不含边框）----
   \newsavebox{\standardimage}
   \savebox{\standardimage}{%
     \includegraphics[width=0.48\textwidth]{figures/声纳原始图像.png}%
@@ -72,31 +75,39 @@
   \begin{minipage}{\textwidth}
     \centering
     \subfigure[声纳原始图像\label{fig:a}]{%
-      \usebox{\standardimage}% 第一张：原始尺寸
+      \fbox{\usebox{\standardimage}}% 加边框
     }\hspace{0.5em}
     \subfigure[小波变换去噪后图像\label{fig:b}]{%
-      \resizebox{!}{\ht\standardimage}{% 强制等高
-        \resizebox{\wd\standardimage}{!}{% 强制等宽
-          \includegraphics{figures/小波变换.png}%
+      \fbox{%
+        \resizebox{!}{\ht\standardimage}{%
+          \resizebox{\wd\standardimage}{!}{%
+            \includegraphics{figures/小波变换.png}%
+          }%
         }%
       }%
     }
   \end{minipage}
 
+  \vskip 1em  % 两行之间间距
+
   % --- 第二行 ---
   \begin{minipage}{\textwidth}
     \centering
     \subfigure[Lee滤波器去噪后图像\label{fig:c}]{%
-      \resizebox{!}{\ht\standardimage}{%
-        \resizebox{\wd\standardimage}{!}{%
-          \includegraphics{figures/Lee滤波器.png}%
+      \fbox{%
+        \resizebox{!}{\ht\standardimage}{%
+          \resizebox{\wd\standardimage}{!}{%
+            \includegraphics{figures/Lee滤波器.png}%
+          }%
         }%
       }%
     }\hspace{0.5em}
     \subfigure[各向异性去噪后图像\label{fig:d}]{%
-      \resizebox{!}{\ht\standardimage}{%
-        \resizebox{\wd\standardimage}{!}{%
-          \includegraphics{figures/各向异性.png}%
+      \fbox{%
+        \resizebox{!}{\ht\standardimage}{%
+          \resizebox{\wd\standardimage}{!}{%
+            \includegraphics{figures/各向异性.png}%
+          }%
         }%
       }%
     }

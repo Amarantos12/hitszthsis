@@ -1,6 +1,7 @@
 % !TEX root = ../main.tex
 
 % 中英标题：\chapter{中文标题}[英文标题]
+
 \chapter{基于无配对数据的初步声纳去噪}
 
 \section{引言}[Introduction]
@@ -21,17 +22,107 @@
 达时间和强度生成数据。随后，通过信号处理技术，将接收到的回波信号转化为图像。常用的方法包括时域分析、频域分析以及图像重建算法。这些处理步骤可以提高图像的清晰度和分辨率，最终生成水下环
 境的声纳图像。
 
+考虑成像声纳视野中的点 $P$( $\theta$, $r$, $\Phi$)，在局部球坐标中参数化，如图\figref{fig:声纳成像1}所示，其中$\theta$, $r$ 和 $\Phi$ 分别表示 $P$ 点的方位角、范围和
+仰角。 $P$ 点到笛卡尔坐标系的坐标 C（$x$，$y$，$z$）的坐标变换与反变换如下：
 
-\subsection{本硕论文题注}[Other picture example]
+\begin{equation}
+	\mathbf{C} = 
+	\left[\!
+	\begin{array}{c}
+	x \\[1.8mm]
+	y \\[1.8mm]
+	z
+	\end{array}
+	\right]
+	=
+	\left[\!
+	\begin{array}{c}
+	r \cos\phi \cos\theta \\[1.8mm]
+	r \cos\phi \sin\theta \\[1.8mm]
+	r \sin\phi
+	\end{array}
+	\right]
+	\label{eq:coord}
+\end{equation}
 
-本硕论文题注如\figref{fig:bm}所示。
+\begin{equation}
+	\mathbf{P} =
+	\left[\!
+	\begin{array}{c}
+	\theta \\[1.8mm]
+	r     \\[1.8mm]
+	\Phi
+	\end{array}
+	\!\right]
+	=
+	\left[\!
+	\begin{array}{c}
+	\arctan2(y,x) \\[1.8mm]
+	\sqrt{x^{2}+y^{2}+z^{2}} \\[1.8mm]
+	\arctan2\!\left(z,\sqrt{x^{2}+y^{2}}\right)
+	\end{array}
+	\!\right]
+	\label{eq:polar}
+\end{equation}
+
+
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width = 0.4\textwidth]{golfer}
-\caption{打高尔夫球的人，硕士论文要求只用汉语}
-\label{fig:bm}
+\includegraphics[width = 0.8\textwidth]{声纳成像1.png}
+\caption{单个声纳图像的几何结构，点 $P$ 由范围 $r$、仰角 $\Phi$ 和方位角 $\theta$ 表示。\\
+  $r_{\min}$, $r_{\max}$, $\Phi_{\min}$, $\Phi_{\max}$, $\theta_{\min}$, $\theta_{\max}$ 分别是成像声纳的最大和最小范围，\\
+  最大仰角和最小仰角，最大方位角和最小方位角。}
+\label{fig:声纳成像1}
 \end{figure}
+
+成像声纳通过发出一系列类似锥形的声波信号来生成部分球面测量值，从收发器测量观察到的反射信号的飞行时间，提供了反射表面的范围 $r$ 和方位角 $\theta$。但是这样的测量无法准确判断出
+仰角 $\Phi$。因此，所有来自同一个方位角和距离的检测回波都会投影到声纳图像上的同一点 $I$( $\theta$, $r$)，如图\ref{fig:声纳成像2}所示。对于对应于 $I$ 点中的某个方位角和距离
+的像素，像素的强度对应于该方位角和距离下所有回波反射信号的强度。
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width = 0.8\textwidth]{声纳成像2.png}
+	\caption{真实声纳图像是整个垂直声纳数据在2D平面的投影。}
+	\label{fig:声纳成像2}
+\end{figure}
+
+为了直观展示前视声纳的成像特征与其在水下环境感知中的应用，如图\ref{fig:水下机器人视觉图像与前视声纳图像对应示意图}所示，展示了同一时刻下水下机器人采集到的视觉图像与对应的前视
+声纳图像。视觉图像反映了光学成像下的场景特征，可见由于水下光线传播的限制，视觉图像中的细节信息较为模糊。而前视声纳图像则通过声波反射捕捉了场景的结构信息，能够清晰地显示出障碍
+物和地形特征。两者在信息维度和感知机制上存在显著差异。
+
+需要指出的是，前视声纳图像通常可以以两种方式进行表示：一种是基于声纳测量参数，以方位角和距离为坐标轴的极坐标图像，直接对应于声纳的观测几何结构；另一种是通过坐标变换，
+如公式\eqref{eq:coord}和\eqref{eq:polar}所示，
+
+
+\begin{figure}[!ht]
+	\centering
+	% ---- 定义标准尺寸盒子（以第一张图为基准）----
+	\newsavebox{\standardbox}
+	\savebox{\standardbox}{%
+	  \includegraphics[width=0.47\textwidth]{figures/2-2视觉图像.jpg}%
+	}
+  
+	% ---- 两张图并排，强制等宽等高 ----
+	\begin{minipage}{\textwidth}
+	  \centering
+	  \subfigure[视觉图像\label{fig:2-2视觉图像}]{%
+		\usebox{\standardbox}% 第一张：原始尺寸
+	  }\hspace{1em}
+	  \subfigure[前视声纳图像\label{fig:2-2声纳图像}]{%
+		\resizebox{!}{\ht\standardbox}{% 强制等高
+		  \resizebox{\wd\standardbox}{!}{% 强制等宽
+			\includegraphics{figures/2-2声纳图像.jpg}%
+		  }%
+		}%
+	  }
+	\end{minipage}
+  
+	\caption{水下机器人视觉图像与前视声纳图像对应示意图}
+	\label{fig:水下机器人视觉图像与前视声纳图像对应示意图}
+  \end{figure}
+
+
 
 \subsection{并排图和子图}[Abreast-picture and Sub-picture example]
 \subsubsection{并排图}[Abreast-picture example]
