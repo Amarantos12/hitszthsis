@@ -27,45 +27,47 @@ Warning--Require address: lin2023conditional
 Warning--Require address: zhou2023stgan
 Warning--Require address: zhu2017unpaired
 Warning--Require address: isola2017image
-You've used 27 entries,
+Warning--Require address: ronneberger2015u
+Warning--Require address: johnson2016perceptual
+You've used 29 entries,
             3189 wiz_defined-function locations,
-            899 strings with 11975 characters,
-and the built_in function-call counts, 53579 in all, are:
-= -- 5918
-> -- 102
-< -- 231
-+ -- 4661
-- -- 363
-* -- 1445
-:= -- 5907
+            910 strings with 12359 characters,
+and the built_in function-call counts, 58584 in all, are:
+= -- 6493
+> -- 110
+< -- 249
++ -- 5136
+- -- 393
+* -- 1549
+:= -- 6480
 add.period$ -- 0
-call.type$ -- 27
-change.case$ -- 150
+call.type$ -- 29
+change.case$ -- 162
 chr.to.int$ -- 0
-cite$ -- 38
-duplicate$ -- 7671
-empty$ -- 2091
-format.name$ -- 300
-if$ -- 14289
+cite$ -- 42
+duplicate$ -- 8390
+empty$ -- 2265
+format.name$ -- 324
+if$ -- 15649
 int.to.chr$ -- 0
-int.to.str$ -- 27
+int.to.str$ -- 29
 missing$ -- 0
-newline$ -- 108
-num.names$ -- 27
-pop$ -- 770
+newline$ -- 114
+num.names$ -- 29
+pop$ -- 836
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 439
+skip$ -- 477
 stack$ -- 0
-substring$ -- 6443
-swap$ -- 1410
+substring$ -- 7060
+swap$ -- 1514
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 11
-while$ -- 712
-width$ -- 29
-write$ -- 409
-(There were 21 warnings)
+warning$ -- 13
+while$ -- 772
+width$ -- 31
+write$ -- 437
+(There were 23 warnings)

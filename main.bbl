@@ -105,4 +105,10 @@
 \bibitem{kullback1951information}
 \bibauthor{KULLBACK S\@，LEIBLER R~A}\@. \bibtitle{On information and sufficiency}\bibmark{\,［J］}\@. \bibjournal{The annals of mathematical statistics}\@，\bibyear{1951}\@，\bibvolume{22}\bibnumber{（1）\!\!}\thinspace{}\textnormal{：}\bibpages{79\textnormal{-}86}\@.
 
+\bibitem{ronneberger2015u}
+\bibauthor{RONNEBERGER O\@，FISCHER P\@，BROX T}\@. \bibtitle{U-net: Convolutional networks for biomedical image segmentation}\bibmark{\,［C］} //\thinspace{}\bibbooktitle{International Conference on Medical image computing and computer-assisted intervention}\@，\bibaddress{［S.l.］}\@，\bibyear{2015}\thinspace{}\textnormal{：}\bibpages{234\textnormal{-}241}\@.
+
+\bibitem{johnson2016perceptual}
+\bibauthor{JOHNSON J\@，ALAHI A\@，FEI-FEI L}\@. \bibtitle{Perceptual losses for real-time style transfer and super-resolution}\bibmark{\,［C］} //\thinspace{}\bibbooktitle{European conference on computer vision}\@，\bibaddress{［S.l.］}\@，\bibyear{2016}\thinspace{}\textnormal{：}\bibpages{694\textnormal{-}711}\@.
+
 \end{thebibliography}

@@ -23,7 +23,7 @@
 境的声纳图像。
 
 考虑成像声纳视野中的点 $P$( $\theta$, $r$, $\Phi$)，在局部球坐标中参数化，如图\figref{fig:声纳成像1}所示，其中$\theta$, $r$ 和 $\Phi$ 分别表示 $P$ 点的方位角、范围和
-仰角。 $P$ 点到笛卡尔坐标系的坐标 C（$x$，$y$，$z$）的坐标变换与反变换如下：
+仰角。 $P$ 点到笛卡尔坐标系的坐标 C( $x$, $y$, $z$)的坐标变换与反变换如下：
 
 \begin{equation}
 	\mathbf{C} = 
@@ -91,10 +91,6 @@
 声纳图像。视觉图像反映了光学成像下的场景特征，可见由于水下光线传播的限制，视觉图像中的细节信息较为模糊。而前视声纳图像则通过声波反射捕捉了场景的结构信息，能够清晰地显示出障碍
 物和地形特征。两者在信息维度和感知机制上存在显著差异。
 
-需要指出的是，前视声纳图像通常可以以两种方式进行表示：一种是基于声纳测量参数，以方位角和距离为坐标轴的极坐标图像，直接对应于声纳的观测几何结构；另一种是通过坐标变换，
-如公式\eqref{eq:coord}和\eqref{eq:polar}所示，
-
-
 \begin{figure}[!ht]
 	\centering
 	% ---- 定义标准尺寸盒子（以第一张图为基准）----
@@ -108,7 +104,7 @@
 	  \centering
 	  \subfigure[视觉图像\label{fig:2-2视觉图像}]{%
 		\usebox{\standardbox}% 第一张：原始尺寸
-	  }\hspace{1em}
+	  }\hspace{0.5em}
 	  \subfigure[前视声纳图像\label{fig:2-2声纳图像}]{%
 		\resizebox{!}{\ht\standardbox}{% 强制等高
 		  \resizebox{\wd\standardbox}{!}{% 强制等宽
@@ -122,208 +118,241 @@
 	\label{fig:水下机器人视觉图像与前视声纳图像对应示意图}
   \end{figure}
 
-
-
-\subsection{并排图和子图}[Abreast-picture and Sub-picture example]
-\subsubsection{并排图}[Abreast-picture example]
-
-使用并排图时，需要注意对齐方式。默认情况是中部对齐。这里给出中部对齐、顶部对齐
-、图片底部对齐三种常见方式。其中，底部对齐方式有一个很巧妙的方式，将长度比较小
-的图放在左面即可。
-
-\lipsum[2]
-
-\begin{figure}[htbp]
-\centering
-\begin{minipage}{0.4\textwidth}
-\centering
-\includegraphics[width=\textwidth]{golfer}
-\bicaption[golfer2]{}{打高尔夫球的人}{Fig.$\!$}{The person playing golf}
-\end{minipage}
-\centering
-\begin{minipage}{0.4\textwidth}
-\centering
-\includegraphics[width=\textwidth]{golfer}
-\bicaption[golfer3]{}{打高尔夫球的人。注意，这里默认居中}{Fig.$\!$}{The person playing golf. Please note that, it is vertically center aligned by default.}
-\end{minipage}
-\end{figure}
-
-\begin{figure}[htbp]
-\centering
-\begin{minipage}[t]{0.4\textwidth}
-\centering
-\includegraphics[width=\textwidth]{golfer}
-\bicaption[golfer5]{}{打高尔夫球的人}{Fig.$\!$}{The person playing golf}
-\end{minipage}
-\centering
-\begin{minipage}[t]{0.4\textwidth}
-\centering
-\includegraphics[width=\textwidth]{golfer}
-\bicaption[golfer8]{}{打高尔夫球的人。注意，此图是顶部对齐}{Fig.$\!$}{The person playing golf. Please note that, it is vertically top aligned.}
-\end{minipage}
-\end{figure}
-
-\begin{figure}[htbp]
-\centering
-\begin{minipage}[t]{0.4\textwidth}
-\centering
-\includegraphics[width=\textwidth,height=\textwidth]{golfer}
-\bicaption[golfer9]{}{打高尔夫球的人。注意，此图对齐方式是图片底部对齐}{Fig.$\!$}{The person playing golf. Please note that, it is vertically bottom aligned for figure.}
-\end{minipage}
-\centering
-\begin{minipage}[t]{0.4\textwidth}
-\centering
-\includegraphics[width=\textwidth]{golfer}
-\bicaption[golfer6]{}{打高尔夫球的人}{Fig.$\!$}{The person playing golf}
-\end{minipage}
-\end{figure}
-
-\subsubsection{子图}[Sub-picture example]
-
-注意：子图题注也可以只用中文。规范规定“分图题置于分图之下或图题之下”，但没有给出具体的格式要求。
-没有要求的另外一个说法就是“无论什么格式都不对”。
-所以只有在一个图中有标注“(a)，(b)”，无法使用\cs{subfigure}的情况下，使用最后一个图例中的格式设置方法，否则不要使用。
-为了应对“无论什么格式都不对”，这个子图图题使用“minipage”和“description”环境，宽度，对齐方式可以按照个人喜好自由设置，是否使用双语子图图题也可以自由设置。
-
-\lipsum[1-3]
-
-无意义文字，每页底部不要留空白。
-
-\lipsum[4-5]
-
-\begin{figure}[!ht]
-\setlength{\subfigcapskip}{-1bp}
-\centering
-\begin{minipage}{\textwidth}
-\centering
-\subfigure{\label{golfer41}}\addtocounter{subfigure}{-2}
-\subfigure[The person playing golf]{\subfigure[打高尔夫球的人~1]{\includegraphics[width=0.4\textwidth]{golfer}}}
-\hspace{2em}
-\subfigure{\label{golfer42}}\addtocounter{subfigure}{-2}
-\subfigure[The person playing golf]{\subfigure[打高尔夫球的人~2]{\includegraphics[width=0.4\textwidth]{golfer}}}
-\end{minipage}
-\centering
-\begin{minipage}{\textwidth}
-\centering
-\subfigure{\label{golfer43}}\addtocounter{subfigure}{-2}
-\subfigure[The person playing golf]{\subfigure[打高尔夫球的人~3]{\includegraphics[width=0.4\textwidth]{golfer}}}
-\hspace{2em}
-\subfigure{\label{golfer44}}\addtocounter{subfigure}{-2}
-\subfigure[The person playing golf. Here, 'hang indent' and 'center last line' are not stipulated in the regulation.]{\subfigure[打高尔夫球的人~4。注意，规范中没有明确规定要悬挂缩进、最后一行居中。]{\includegraphics[width=0.4\textwidth]{golfer}}}
-\end{minipage}
-\vspace{0.2em}
-\bicaption[golfer4]{}{打高尔夫球的人}{Fig.$\!$}{The person playing gol}
-\end{figure}
-
-\begin{figure}[t]
-  \centering
-  \begin{minipage}{.7\linewidth}
-    \setlength{\subfigcapskip}{-1bp}
-    \centering
-    \begin{minipage}{\textwidth}
-      \centering
-      \subfigure{\label{golfer45}}\addtocounter{subfigure}{-2}
-      \subfigure[The person playing golf]{\subfigure[打高尔夫球的人~1]{\includegraphics[width=0.4\textwidth]{golfer}}}
-      \hspace{4em}
-      \subfigure{\label{golfer46}}\addtocounter{subfigure}{-2}
-      \subfigure[The person playing golf]{\subfigure[打高尔夫球的人~2]{\includegraphics[width=0.4\textwidth]{golfer}}}
-    \end{minipage}
-    \vskip 0.2em
-  \wuhao 注意：这里是中文图注添加位置（我工要求，图注在图题之上）。
-    \vspace{0.2em}
-\bicaption[golfer47]{}{打高尔夫球的人。注意，此处我工有另外一处要求，子图图题可以位于主图题之下。但由于没有明确说明位于下方具体是什么格式，所以这里不给出举例。}{Fig.$\!$}{The person playing golf. Please note that, although it is appropriate to put subfigures' captions under this caption as stipulated in regulation, but its format is not clearly stated.}
-  \end{minipage}
-\end{figure}
-
-\begin{figure}[t]
-\centering
-% \begin{tikzpicture}
-% 	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.3\textwidth]{golfer}};
-% 	\begin{scope}[x={(image.south east)},y={(image.north west)}]
-% 		\node at (0.3,0.5) {a)};
-% 		\node at (0.8,0.2) {b)};
-% 	\end{scope}
-% \end{tikzpicture}
-\includegraphics[width=0.3\textwidth]{golfer}
-\bicaption[golfer0]{}{打高尔夫球球的人（博士论文双语题注）}{Fig.$\!$}{The person playing golf (Doctoral thesis)}
-\vskip -0.4em
- \hspace{2em}
-\begin{minipage}[t]{0.3\textwidth}
-\wuhao \setlist[description]{font=\normalfont}
-	\begin{description}
-		\item[(a)]子图图题
-		\item[(a)]Subfigure caption
-	\end{description}
- \end{minipage}
- \hspace{2em}
- \begin{minipage}[t]{0.3\textwidth}
-\wuhao \setlist[description]{font=\normalfont}
-	\begin{description}
-		\item[(b)]子图图题
-		\item[(b)]Subfigure caption
-	\end{description}
-\end{minipage}
-\end{figure}
+需要指出的是，前视声纳图像通常可以以两种方式进行表示：一种是基于声纳测量参数，以方位角和距离为坐标轴的极坐标图像，直接对应于声纳的观测几何结构；另一种是通过坐标变换，
+如公式\eqref{eq:coord}和\eqref{eq:polar}所示，将极坐标数据映射到笛卡尔平面上的笛卡尔坐标图像。前者能保留声纳探测的物理意义，后者则更便于与视觉图像进行对比以及后续的图像处理任务。
+如图\ref{fig:笛卡尔与极坐标图像对应示意图}所示，左侧为前视声纳的笛卡尔图像，右侧为对应的极坐标图像。可以看出，笛卡尔图像通过坐标变换展现了空间中的物体分布，而极坐标图像则更直
+观地展示探测的物体结构。
 
 \begin{figure}[!ht]
 	\centering
-	\begin{sideways}
-		\begin{minipage}{\textheight}
-			\centering
-			\fbox{\includegraphics[width=0.2\textwidth]{golfer}}
-			\fbox{\includegraphics[width=0.2\textwidth]{golfer}}
-			\fbox{\includegraphics[width=0.2\textwidth]{golfer}}
-			\fbox{\includegraphics[width=0.2\textwidth]{golfer}}
-			\fbox{\includegraphics[width=0.2\textwidth]{golfer}}
-			\fbox{\includegraphics[width=0.2\textwidth]{golfer}}
-			\fbox{\includegraphics[width=0.2\textwidth]{golfer}}
-\bicaption[golfer7]{}{打高尔夫球的人（非规范要求）}{Fig.$\!$}{The person playing golf (Not stated in the regulation)}
-		\end{minipage}
-	\end{sideways}
+	\newsavebox{\leftpic}
+	\savebox{\leftpic}{%
+	  \includegraphics[height=4.1cm]{figures/笛卡尔图像.png}%
+	}%
+
+	% 左图
+	\subfigure[前视声纳笛卡尔图像\label{fig:笛卡尔图像}]{%
+	  \begin{minipage}[t]{\wd\leftpic}
+	    \centering
+	    \usebox{\leftpic}
+	  \end{minipage}%
+	}
+	% 右图
+	\subfigure[前视声纳极坐标图像\label{fig:极坐标图像}]{%
+	  \begin{minipage}[t]{\wd\leftpic}
+	    \centering
+	    \resizebox{!}{\ht\leftpic}{%
+	      \includegraphics{figures/极坐标图像.jpg}%
+	    }%
+	  \end{minipage}%
+	}%
+
+	\caption{笛卡尔图像与极坐标图像对应示意图}
+	\label{fig:笛卡尔与极坐标图像对应示意图}
 \end{figure}
 
-\clearpage
 
-如果不想让图片浮动到下一章节，那么在此处使用\cs{clearpage}命令。
+\section{循环一致性对抗网络}
 
-\section{如何做出符合规范的漂亮的图}
+循环一致性对抗网络（Cycle-Consistent Adversarial Network，CycleGAN）旨在解决图像到图像翻译的问题。该方法的核心在于能够在没有配对训练数据的情况下学习两个图像域之间的映射关系。对于
+前视声纳这种缺少“干净”图像作为参考的情况，适合使用CycleGAN进行非配对图像去噪。传统图像翻译任务（如灰度图到彩色图、边缘图到照片）通常依赖于配对的输入和输出图像样本，但CycleGAN通过引
+入循环一致性损失（Cycle Consistent loss），使其应用于许多实际场景，如艺术风格迁移，物体变形，季节转换和照片增强等。
 
-关于作图工具在后文\ref{drawtool}中给出一些作图工具的介绍，此处不多言。
-此处以R语言和Tikz为例说明如何做出符合规范的图。
+图像到图像翻译的目标是将一个源域X中的图像转换为目标域Y中的图像。CycleGAN针对无配对设置，仅使用源域样本和目标域样本，通过对抗训练确保生成的图像分布与目标域匹配，并使用循环一致性避免模式崩溃。
+CycleGAN的模型包含两个生成器和两个判别器。生成器 $G: X \rightarrow Y$ 将源域图像转换为目标域图像，生成器 $F: Y \rightarrow X$ 则执行相反的映射。判别器 $D_Y$ 旨在区分真实的目标域图像和
+生成的图像，而判别器 $D_X$ 则区分真实的源域图像和生成的图像。这种双向对抗与映射结构如图\ref{fig:cyclegan1}所示，通过联合训练两个生成器和判别器，实现两个域之间的循环一致性翻译。
 
-\subsection{Tikz作图}
+\begin{figure}[!ht]
+	% 创建一个图形环境，[!ht] 表示优先将图形放置在“此处”或“页面顶部”
+	\setlength{\subfigcapskip}{-1bp}
+	% 设置子图标题与图像之间的间距为 -1bp（负值使标题更靠近图像）
+	\centering
+	% 使图形内容居中对齐
+	\begin{minipage}{\textwidth}
+	  % 创建一个宽度等于文本宽度的迷你页面，用于容纳子图
+	  \centering
+	  % 迷你页面内容居中
+	  \subfigure[\label{fig:cyclegan1}]{\includegraphics[width=0.3\textwidth]{figures/cyclegan1.jpg}}
+	  % 定义第一个子图，标题为“图像1的标题”，插入图片 figures/1.jpg，宽度为文本宽度的 45%
+	  \hspace{0.1em}
+	  % 在两个子图之间添加 2em 的水平间距
+	  \subfigure[\label{fig:cyclegan2}]{\includegraphics[width=0.3\textwidth]{figures/cyclegan2.jpg}}
+	  \hspace{0.1em}
+	  \subfigure[\label{fig:cyclegan3}]{\includegraphics[width=0.3\textwidth]{figures/cyclegan3.jpg}}
+	  % 定义第二个子图，标题为“图像2的标题”，插入图片 figures/2.jpg，宽度为文本宽度的 45%
+	\end{minipage}
+	% \vspace{0.2em}
+	% 在图形与下方内容之间添加 0.2em 的垂直间距
+	\caption{CycleGAN 示意图}
+	\label{fig:cyclegan原理} % 为整个图形添加标签
+  \end{figure}
+  
+为使生成器输出的图像在统计分布上与目标域相似，引入对抗损失函数。我们以$G: X \rightarrow Y$ 与判别器 $D_Y$ 为例，对抗损失 $\mathcal{L}_\mathrm{GAN}(G,D_Y,X,Y)$ 定义为：
+\begin{equation}
+    \label{eq1}
+    \begin{aligned}
+        \mathcal{L}_\mathrm{GAN}(G,D_Y,X,Y) &= \mathbb{E}_{y \sim p_Y}[\log D_Y(y)] \\
+        &+ \mathbb{E}_{x \sim p_X}[\log (1-D_Y(G(x)))] 
+    \end{aligned}.
+\end{equation}
+其中，$G$ 旨在生成足够“真实”的图像以欺骗判别器 $D_Y$，而 $D_Y$ 则尽力区分生成样本与真实样本。
+同理，对抗损失 $\mathcal{L}_\mathrm{GAN}(F,D_X,Y,X)$ 对于 $F: Y \rightarrow X$ 及其对应的判别器 $D_X$ 也有类似的定义。
+总对抗损失 $\mathcal{L}_{\mathrm{ad}}$ 是 $\mathcal{L}_\mathrm{GAN}(G,D_Y,X,Y)$ 和 $\mathcal{L}_\mathrm{GAN}(F,D_X,Y,X)$ 的加权和。
 
-使用Tikz作图核心思想是把格式、主题、样式与内容分离，定义在全局中。
-注意字体设置可以有两种选择，如果字少，用五号字，字多用小五。
-使用Tikz作图不会出现字体问题，字体会自动与正文一致。
+由于无配对训练样本无法保证 $x$ 与 $y$ 的一一对应，仅使用对抗损失会导致映射关系不稳定或模式坍塌。为此，CycleGAN引入循环一致性约束，要求经过双向映射的图像应该尽可能还原输入，
+即：$F(G(x)) \approx x$ 和 $G(F(y)) \approx y$。相应的循环一致性损失函数定义为：
+\begin{equation}
+    \label{eq2}
+    \begin{aligned}
+        \mathcal{L}_\mathrm{cyc}(G,F) &= \mathbb{E}_{x \sim p_X}[\|F(G(x))-x\|_1] \\
+        &+ \mathbb{E}_{y \sim p_Y}[\|G(F(y))-y\|_1] 
+    \end{aligned}.
+\end{equation}
+如图\ref{fig:cyclegan2}和图\ref{fig:cyclegan3}所示，该约束确保跨域映射保留图像的结构信息，从而提升转换的一致性与可逆性。
 
-\subsection{R作图}
+在某些任务（如绘画到实景照片的风格迁移）中，CycleGAN可能在输入已经属于目标域时仍对图像进行不必要的颜色或亮度改变。为此，引入了身份映射损失，用于鼓励生成器在输入图像已经属于
+目标域时保持输出不变。该损失函数定义如下：
+\begin{equation}
+    \label{eq3}
+    \begin{aligned}
+        \mathcal{L}_\mathrm{id}(G,F) &= \mathbb{E}_{y \sim p_Y}[\|G(y)-y\|_1] \\
+        &+ \mathbb{E}_{x \sim p_X}[\|F(x)-x\|_1] 
+    \end{aligned}.
+\end{equation}
+身份映射损失在保持图像色彩一致性与亮度分布方面具有重要作用，对于保护目标物体，防止去噪过多导致信息丢失尤为关键。
 
-R是一种极具有代表性的典型的作图工具，应用广泛。
-与Tikz图不同，R作图分两种情况：（1）可以转换为Tikz码；（2）不可转换为Tikz码。
-第一种情况图形简单，图形中不含有很多数据点，使用R语言中的Tikz包即可。
-第二种情况是图形复杂，含有海量数据点，这时候不要转成Tikz矢量图，这会使得论文体积巨大。
-推荐使用pdf或png非矢量图形。
-使用非矢量图形时要注意选择好字号（五号或小五），和字体（宋体、新罗马）然后选择生成图形大小，注意此时在正文中使用\cs{includegraphics}命令导入时，不要像导入矢量图那样控制图形大小，使用图形的原本的
-宽度和高度，这样就确保了非矢量图形中的文字与正文一致了。
+CycleGAN的总损失函数由上述三部分组成，损失函数如下：
+\begin{equation}
+    \label{eq4}
+    \mathcal{L}(G, F, D_X, D_Y)=\mathcal{L}_{\mathrm{ad}}+\lambda_\mathrm{cyc}\,\mathcal{L}_\mathrm{cyc}(G,F)+\lambda_\mathrm{id}\,\mathcal{L}_\mathrm{id}(G,F).
+\end{equation}
+其中，$\lambda_{cyc}$ 与 $\lambda_{id}$ 分别为循环一致性与身份损失的权重系数。最终优化目标为：
+\begin{equation}
+	\label{eq5}
+	G^*, F^* = \arg \min_{G,F} \max_{D_X, D_Y} \mathcal{L}(G, F, D_X, D_Y).
+\end{equation}
 
-为了控制\hitszthesis\ 的大小，此处不给出具体举例。
 
-\subsection{专业绘图工具}[Processional drawing tool]
-\label{drawtool}
+\section{循环一致性对抗网络}
 
-推荐使用tikz包，使用tikz源码绘图的好处是，图片中的字体与正文中的字体一致。具体如
-何使用tikz绘图不属于模板范畴。
+循环一致性对抗网络（Cycle-Consistent Adversarial Network，CycleGAN）由 Zhu 等人于 2017 年提出~\cite{zhu2017unpaired}，旨在解决无配对条件下的图像到图像翻译问题（Unpaired Image-to-Image Translation）。
+与传统的监督式方法（如 Pix2Pix~\cite{isola2017image}）不同，CycleGAN 能在没有配对训练数据的情况下学习两个图像域之间的映射关系。
+这一特性使其特别适用于缺乏“干净”参考图像的场景，例如前视声纳图像去噪任务中，真实环境下几乎不可能同时获得同一场景的有噪声与无噪声配对图像。
 
-tikz适合用来画不需要大量实验数据支撑示意图。但R语言等专业绘图工具具有画出各种、
-专业、复杂的数据图。R语言中有tikz包，能自动生成tikz码，这样tikz几乎无所不能。
-对于排版有极致追求的小伙伴，可以参考
-\href{http://www.texample.net/tikz/resources/}{http://www.texample.net/tikz/resources/}
-中所列工具，几乎所有作图软件所作的图形都可转成tikz，然后可以自由的在tikz中修改
-图中内容，定义字体等等。实现前文窝工规范中要求的图中字体的一致性的终极目标。
+传统的图像翻译任务（如灰度图到彩色图、素描到照片、昼夜转换等）往往依赖成对的训练样本 $(x_i, y_i)$。
+而在声纳成像等非理想观测条件下，配对样本的获取代价极高甚至无法实现。
+CycleGAN 通过引入循环一致性约束（Cycle Consistency Loss）与身份映射约束（Identity Loss），在保证结构一致性的同时实现了跨域映射学习，为非配对图像去噪提供了一种高效的可行方案。
 
-\lipsum[1]
+CycleGAN 的整体结构包含两个生成器（Generator）和两个判别器（Discriminator），分别建立在两个域 $X$ 和 $Y$ 之间的对偶映射关系：
+生成器 $G: X \rightarrow Y$ 将源域图像转换为目标域风格，生成器 $F: Y \rightarrow X$ 执行逆向映射。
+判别器 $D_Y$ 用于判别输入图像是否来自目标域 $Y$，而 $D_X$ 判别输入图像是否属于源域 $X$。
+这种双向的对抗结构如图~\ref{fig:cyclegan1} 所示，通过相互约束与循环反馈，使得生成的图像在语义与结构上保持一致。
 
-\section{本章小结}[Brief summary]
+\begin{figure}[!ht]
+	% 创建一个图形环境，[!ht] 表示优先将图形放置在“此处”或“页面顶部”
+	\setlength{\subfigcapskip}{-1bp}
+	% 设置子图标题与图像之间的间距为 -1bp（负值使标题更靠近图像）
+	\centering
+	% 使图形内容居中对齐
+	\begin{minipage}{\textwidth}
+	  % 创建一个宽度等于文本宽度的迷你页面，用于容纳子图
+	  \centering
+	  % 迷你页面内容居中
+	  \subfigure[\label{fig:cyclegan1}]{\includegraphics[width=0.3\textwidth]{figures/cyclegan1.jpg}}
+	  % 定义第一个子图，标题为“图像1的标题”，插入图片 figures/1.jpg，宽度为文本宽度的 45%
+	  \hspace{0.1em}
+	  % 在两个子图之间添加 2em 的水平间距
+	  \subfigure[\label{fig:cyclegan2}]{\includegraphics[width=0.3\textwidth]{figures/cyclegan2.jpg}}
+	  \hspace{0.1em}
+	  \subfigure[\label{fig:cyclegan3}]{\includegraphics[width=0.3\textwidth]{figures/cyclegan3.jpg}}
+	  % 定义第二个子图，标题为“图像2的标题”，插入图片 figures/2.jpg，宽度为文本宽度的 45%
+	\end{minipage}
+	% \vspace{0.2em}
+	% 在图形与下方内容之间添加 0.2em 的垂直间距
+	\caption{CycleGAN 示意图}
+	\label{fig:cyclegan原理} % 为整个图形添加标签
+  \end{figure}
 
-\lipsum[1]
+在网络设计上，CycleGAN 的生成器采用了基于 U-Net~\cite{ronneberger2015u} 或 ResNet~\cite{johnson2016perceptual} 的结构，以便在跨域变换中保留低层特征与高层语义信息。
+其中，ResNet 生成器通常由 $9$ 个残差块（Residual Blocks）组成，以捕获复杂的跨域映射特征。
+判别器则采用 PatchGAN~\cite{isola2017image} 结构，通过判断每个局部图像块的真假性来提高模型的细节保真度，从而生成更自然、更逼真的图像纹理。
+
+为确保生成图像在分布上接近目标域，CycleGAN引入了对抗损失函数。以 $G: X \rightarrow Y$ 与判别器 $D_Y$ 为例，其对抗损失定义如下：
+\begin{equation}
+    \label{eq1}
+    \begin{aligned}
+        \mathcal{L}_\mathrm{GAN}(G,D_Y,X,Y) &= \mathbb{E}_{y \sim p_Y}[\log D_Y(y)] \\
+        &+ \mathbb{E}_{x \sim p_X}[\log (1-D_Y(G(x)))].
+    \end{aligned}
+\end{equation}
+生成器 $G$ 旨在生成足够真实的图像以欺骗判别器 $D_Y$，而判别器 $D_Y$ 则学习区分真实样本与伪造样本。
+同理，对于 $F: Y \rightarrow X$ 及其对应的判别器 $D_X$，定义类似的损失项 $\mathcal{L}_\mathrm{GAN}(F,D_X,Y,X)$。
+两者之和构成总对抗损失 $\mathcal{L}_\mathrm{ad}$。
+
+由于无配对训练样本无法保证 $x$ 与 $y$ 的一一对应，仅靠对抗训练容易导致模式坍塌（Mode Collapse）或结构失真。
+为约束生成器学习稳定的可逆映射关系，CycleGAN 引入循环一致性损失，要求经过双向映射的图像尽可能还原输入：
+\[
+F(G(x)) \approx x, \quad G(F(y)) \approx y.
+\]
+循环一致性损失定义为：
+\begin{equation}
+    \label{eq2}
+    \begin{aligned}
+        \mathcal{L}_\mathrm{cyc}(G,F) &= \mathbb{E}_{x \sim p_X}[\|F(G(x))-x\|_1] \\
+        &+ \mathbb{E}_{y \sim p_Y}[\|G(F(y))-y\|_1].
+    \end{aligned}
+\end{equation}
+该项损失确保模型在跨域转换过程中保留图像的几何与结构特征，提升了生成结果的稳定性与可逆性。
+在声纳图像去噪任务中，该约束有助于保持场景目标的空间一致性，避免在去噪过程中出现结构模糊或物体形态扭曲。
+
+在部分任务（如绘画到实景照片或光照增强）中，若输入图像本身已经接近目标域，模型可能在不必要的情况下改变色彩或亮度。
+为缓解这一问题，引入身份映射损失（Identity Loss）以约束生成器的输出应尽量保持与输入一致：
+\begin{equation}
+    \label{eq3}
+    \begin{aligned}
+        \mathcal{L}_\mathrm{id}(G,F) &= \mathbb{E}_{y \sim p_Y}[\|G(y)-y\|_1] \\
+        &+ \mathbb{E}_{x \sim p_X}[\|F(x)-x\|_1].
+    \end{aligned}
+\end{equation}
+该项损失在保持图像色彩与亮度一致性方面具有显著作用。
+在声纳去噪任务中，身份约束可以防止生成器过度平滑目标结构，防止噪声抑制导致的细节丢失。
+
+CycleGAN 的整体优化目标由三部分损失组成：
+\begin{equation}
+    \label{eq4}
+    \mathcal{L}(G, F, D_X, D_Y)=\mathcal{L}_{\mathrm{ad}}+\lambda_\mathrm{cyc}\,\mathcal{L}_\mathrm{cyc}(G,F)+\lambda_\mathrm{id}\,\mathcal{L}_\mathrm{id}(G,F),
+\end{equation}
+其中，$\lambda_\mathrm{cyc}$ 与 $\lambda_\mathrm{id}$ 分别为循环一致性与身份损失的权重系数。
+原论文中通常取 $\lambda_\mathrm{cyc}=10$，$\lambda_\mathrm{id}=0.5\,\lambda_\mathrm{cyc}$。
+最终优化目标为：
+\begin{equation}
+	\label{eq5}
+	G^*, F^* = \arg \min_{G,F} \max_{D_X, D_Y} \mathcal{L}(G, F, D_X, D_Y).
+\end{equation}
+
+CycleGAN 的核心优势在于其无监督学习特性与结构保持能力：
+\begin{itemize}
+    \item 不依赖配对样本即可实现跨域映射；
+    \item 保留源图像的几何结构与语义一致性；
+    \item 可扩展性强，适用于风格迁移、图像增强、语义分割前处理等多种任务。
+\end{itemize}
+在前视声纳图像去噪任务中，CycleGAN 能够学习噪声域与干净域之间的隐式映射关系，通过对抗学习抑制随机噪声，同时依靠循环一致性与身份约束保持目标结构完整。
+这为后续的结构性噪声抑制提供了可靠的先验。
+
+
+
+
+
+\section{声纳图像无配对去噪网络的构建与优化}
+本研究中，声纳图像的噪声域和干净域分别由含噪声的真实声纳图像和通过模拟仿真生成的声纳图像构成。由于实际采集的声纳图像往往受到环境和设备因素影响而包含复杂噪声，而仿真生成的图像可以在理想条件下
+生成，具有较高的结构与纹理清晰度，因此两者在视觉特性上存在明显域差异。为了在无配对条件下实现这两种域间的特征迁移，本阶段采用CycleGAN为核心框架，构建噪声域到干净域，干净域到噪声域的双向映射，
+通过循环一致性约束实现结构信息的保持与伪影的抑制。
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width = 1.0\textwidth]{upd1.png}
+	\caption{}
+	\label{fig:upd1}
+\end{figure}
+	
+
